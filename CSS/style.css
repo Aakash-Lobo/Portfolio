@@ -256,7 +256,11 @@ article { display: none; }
 
 .avatar-box {
     background: var(--bg-gradient-onyx);
+    
+  height: 150px;
     border-radius: 20px;
+    overflow: hidden;
+
 }
 
 .info-content .name {
