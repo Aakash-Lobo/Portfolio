@@ -257,7 +257,7 @@ article { display: none; }
 .avatar-box {
     background: var(--bg-gradient-onyx);
 
-  height: 150px;
+  height: 25%;
     border-radius: 20px;
     overflow: hidden;
     
@@ -599,7 +599,7 @@ article { display: none; }
     width: max-content;
     border-radius: 14px;
     margin-bottom: 15px;
-    box-shadow: var(--shadow2);
+    box-shadow: var(--shadow2); overflow: hidden;
 }
 
 .modal-img-wrapper > img { display: none; }
@@ -1133,7 +1133,7 @@ textarea.form-input {
 
     .sidebar-info { gap: 25px; }
 
-    .avatar-box { border-radius: 30px; }
+    .avatar-box { border-radius: 30px; overflow: hidden; }
         .avatar-box img { width: 120px; }
 
     .info-content .name { margin-bottom: 15px; }
@@ -1234,7 +1234,7 @@ textarea.form-input {
 
     .modal-avatar-box {
         border-radius: 18px;
-        margin-bottom: 0;
+        margin-bottom: 0; overflow: hidden;
     }
 
         .modal-avatar-box img { width: 65px; }
@@ -1314,7 +1314,7 @@ textarea.form-input {
         max-width: 680px;
     }
 
-    .modal-avatar-box img { width: 80px; }
+    .modal-avatar-box img { width: 80px;  overflow: hidden;}
 
     .article-title { padding-bottom: 20px; }
 
@@ -1487,4 +1487,134 @@ textarea.form-input {
     .social-list { justify-content: center; }
 
     .timeline-text { max-width: 700px; }
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.project-button {
+  background-color: #4e4e4e;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.project-button:hover {
+  background-color: #2c2c2c;
+}
+
+/* Modal Backdrop */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* Modal Container */
+.modal-content {
+  background: #fff;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #ff4d4d;
+}
+
+/* Carousel Images */
+.carousel-image {
+  display: none;
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.carousel-image.active {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding: 0 20px;
+}
+
+.carousel-controls button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-controls button:hover {
+  background-color: #555;
+}
+
+/* Modal Links (Docs, Video, Code) */
+.modal-links {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.modal-links a {
+  background: #007bff;
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.modal-links a:hover {
+  background: #0056b3;
+}
+
+/* Ensure Modal Is On Top of All Content */
+body.modal-open {
+  overflow: hidden;
 }
