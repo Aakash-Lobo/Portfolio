@@ -1618,3 +1618,20 @@ textarea.form-input {
 body.modal-open {
   overflow: hidden;
 }
+
+.skill-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-left: auto;
+}
+.skills-progress-bg {
+  background-color: #eee;
+  border-radius: 8px;
+  height: 8px;
+  margin: 6px 0 10px;
+}
+.skills-progress-fill {
+  height: 8px;
+  border-radius: 8px;
+  transition: width 0.4s ease;
+}
